@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tanzura - Detection Results</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <script defer src="{{ url_for('static', filename='js/script.js') }}"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body class="results-body">
+    <div class="results-container">
+        <h1>Detection Results</h1>
+        <p>Your analysis is complete. Here are the results:</p>
+
+        <div class="results-card">
+            <h2>📸 Uploaded Image</h2>
+            <img src="{{ image_url }}" alt="Uploaded Image" class="uploaded-image">
+
+            <h2>🔬 Detection Analysis</h2>
+            <p><strong>Microplastic Particles Detected:</strong> {{ detected_particles }}</p>
+            <p><strong>Confidence Score:</strong> {{ confidence_score }}%</p>
+
+            <h2>🛑 Risk Level</h2>
+            <p class="risk-level {{ risk_category }}">{{ risk_category }}</p>
+
+            <h2>💧 Water Quality Score</h2>
+            <p class="water-score">{{ water_quality_score }} / 100</p>
+
+            <h2>🛠 Recommended Filtration</h2>
+            <ul class="recommendations">
+                {% for filter in recommended_filters %}
+                    <li>✔️ {{ filter }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+
+        <div class="action-buttons">
+            <a href="{{ url_for('index') }}" class="btn">Upload Another</a>
+            <a href="{{ url_for('download_report', image_id=image_id) }}" class="btn download">Download Report</a>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Tanzura. All rights reserved.</p>
+    </footer>
+</body>
+</html>

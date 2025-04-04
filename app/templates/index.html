@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tanzura - AI Microplastic Detection</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <script defer src="{{ url_for('static', filename='js/script.js') }}"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav>
+        <div class="logo">🌊 Tanzura</div>
+        <ul>
+            <li><a href="register.html">Register</a></li>
+            <li><a href="login.html">Login</a></li>
+            <li><a href="dashboard.html">Dashboard</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Detect Microplastics in Water Using AI</h1>
+            <p>Upload your water sample image and get an instant contamination report.</p>
+            <a href="dashboard.html" class="cta-button">Get Started</a>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+        <h2>Why Use Tanzura?</h2>
+        <div class="feature-grid">
+            <div class="feature">
+                <i class="fas fa-microscope"></i>
+                <h3>AI-Powered Detection</h3>
+                <p>Our YOLO-based AI model detects microplastics with high accuracy.</p>
+            </div>
+            <div class="feature">
+                <i class="fas fa-water"></i>
+                <h3>Water Quality Score</h3>
+                <p>Get a detailed water quality rating based on contamination levels.</p>
+            </div>
+            <div class="feature">
+                <i class="fas fa-user-shield"></i>
+                <h3>Safety Recommendations</h3>
+                <p>Receive guidance on water filtration and safety measures.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Tanzura. All rights reserved.</p>
+    </footer>
+</body>
+</html>

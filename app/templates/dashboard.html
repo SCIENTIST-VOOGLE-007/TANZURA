@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tanzura - Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <script defer src="{{ url_for('static', filename='js/script.js') }}"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav>
+        <div class="logo">🌊 Tanzura</div>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="results.html">Results</a></li>
+            <li><a href="logout.html">Logout</a></li>
+        </ul>
+    </nav>
+
+    <!-- Dashboard Container -->
+    <section class="dashboard">
+        <h1>Upload Water Sample for AI Detection</h1>
+
+        <!-- Drag & Drop Upload Box -->
+        <div class="upload-box" id="uploadBox">
+            <i class="fas fa-upload"></i>
+            <p>Drag & Drop Image Here or Click to Upload</p>
+            <input type="file" id="fileInput" accept="image/*">
+        </div>
+
+        <!-- AI Detection Results -->
+        <div class="results-section">
+            <h2>Detection Results</h2>
+            <div class="result-box">
+                <p><strong>Microplastic Confidence Score:</strong> <span id="confidenceScore">-</span>%</p>
+                <p><strong>Water Quality Rating:</strong> <span id="waterQuality">-</span></p>
+                <p><strong>Recommended Filtration:</strong> <span id="filtrationAdvice">-</span></p>
+            </div>
+        </div>
+
+        <!-- Past Uploads & Results -->
+        <h2>Past Results</h2>
+        <table class="results-table">
+            <thead>
+                <tr>
+                    <th>Image</th>
+                    <th>Confidence Score</th>
+                    <th>Water Quality</th>
+                    <th>Date</th>
+                </tr>
+            </thead>
+            <tbody id="pastResults">
+                <tr>
+                    <td><img src="{{ url_for('static', filename='images/sample.jpg') }}" alt="Sample Image"></td>
+                    <td>92%</td>
+                    <td>Moderate</td>
+                    <td>2025-02-24</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Tanzura. All rights reserved.</p>
+    </footer>
+</body>
+</html>

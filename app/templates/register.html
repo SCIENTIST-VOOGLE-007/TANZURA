@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tanzura - Register</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <script defer src="{{ url_for('static', filename='js/script.js') }}"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body class="register-body">
+    <div class="register-container">
+        <h1>Create an Account</h1>
+        <p>Join Tanzura and start analyzing microplastics</p>
+
+        <!-- Registration Form -->
+        <form action="{{ url_for('register_user') }}" method="POST">
+            <div class="input-group">
+                <i class="fas fa-user"></i>
+                <input type="text" name="name" placeholder="Full Name" required>
+            </div>
+            <div class="input-group">
+                <i class="fas fa-envelope"></i>
+                <input type="email" name="email" placeholder="Email" required>
+            </div>
+            <div class="input-group">
+                <i class="fas fa-lock"></i>
+                <input type="password" name="password" id="password" placeholder="Password" required>
+            </div>
+            <div class="input-group">
+                <i class="fas fa-lock"></i>
+                <input type="password" name="confirm_password" id="confirm_password" placeholder="Confirm Password" required>
+            </div>
+            <button type="submit" class="btn">Register</button>
+        </form>
+
+        <!-- Additional Links -->
+        <div class="register-links">
+            <p>Already have an account? <a href="login.html">Login here</a></p>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Tanzura. All rights reserved.</p>
+    </footer>
+</body>
+</html>
