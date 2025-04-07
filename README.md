@@ -49,14 +49,19 @@ Get real-time microplastic analysis with risk level prediction.
 
 🧠 Model Info
 Architecture: U-Net
+
 Accuracy: 80% on test data
+
 Input: 256x256 grayscale microscopic images
+
 Output: Mask highlighting microplastic regions
+
 
 📊 Example Input
 Upload sample images in PNG or JPG format:
 /samples/sample1.jpg
 /samples/sample2.jpg
+
 
 
 🤝 Contributing
